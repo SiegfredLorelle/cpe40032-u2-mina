@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 18.5f;
     private float xRange = 18.5f;
 
-    public GameObject projectilePrefab;
+    public GameObject[] projectilePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +37,9 @@ public class PlayerController : MonoBehaviour
         // Launch projectile by pressing spacebar
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            // Randomize which projectile to lauch
+            int projectileIndex = Random.Range(0, projectilePrefab.Length);
+            Instantiate(projectilePrefab[projectileIndex], transform.position, projectilePrefab[projectileIndex].transform.rotation);
         }
 
     }

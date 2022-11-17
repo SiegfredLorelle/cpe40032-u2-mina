@@ -246,8 +246,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalPrefab:
+  - {fileID: 869921167781307103, guid: 8cb2e6ffbc008624c9cec9d420b2bcd5, type: 3}
   - {fileID: 8343120045476982319, guid: 7400cacf9cc90c24e8adc871dc696530, type: 3}
   - {fileID: 2894185866935564569, guid: 7e3c443fbff31bd40b4dc7b71a233ddf, type: 3}
+  - {fileID: 6383275139736874409, guid: 163a4a5e3d1fe60479e54ffd32f7da07, type: 3}
   - {fileID: 8117874058477678294, guid: 6a5477296be45ad40b42d14f521d385d, type: 3}
 --- !u!4 &406090623
 Transform:
@@ -395,7 +397,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16176c138e4da4678ad7e9a9dd39429d, type: 2}
+  - {fileID: 2100000, guid: bc90d48240dd64916900ac98e11b3e5f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -696,7 +698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e354b99f47bc31f40b668623047614f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInput: 0
-  speed: 17.5
-  xRange: 18.5
-  projectilePrefab: {fileID: 2564428323296654881, guid: 6ed42261a42e74f47aa0e70fa30f124d, type: 3}
+  projectilePrefab:
+  - {fileID: 2564428323296654881, guid: 6ed42261a42e74f47aa0e70fa30f124d, type: 3}
+  - {fileID: 6312318182178534540, guid: 5c9d59874f40d74409b7814cba2039f0, type: 3}
