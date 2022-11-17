@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float horizontalInput;
-    public float speed = 10.0f;
-    public float xRange = 15.0f;
+    private float horizontalInput;
+    private float speed = 18.5f;
+    private float xRange = 18.5f;
 
     public GameObject projectilePrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Ensure player is within bound
+        // Keep player is within bound
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -30,12 +30,11 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        // Get the horizontal input (W, D, left, right keys)
-        horizontalInput = Input.GetAxis("Horizontal");
         // Move the player to the left or right
+        horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
-        // Launch projectile when pressing spacebar
+        // Launch projectile by pressing spacebar
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
