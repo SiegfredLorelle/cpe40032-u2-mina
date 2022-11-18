@@ -25,7 +25,7 @@ public class DestroyOutOfBounds : MonoBehaviour
 
         else if (transform.position.z < lowerBound || transform.position.x > sideBound || transform.position.x < -sideBound)
         {
-            Debug.Log("An dog got out!");
+            Debug.Log("A dog got out!");
             Destroy(gameObject);
         }
     }
